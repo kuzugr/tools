@@ -1,3 +1,5 @@
+# masterにブランチを変更
+git checkout master
 # ローカルのgitを最新化する（不要なリモートブランチの削除）
 git fetch -p
 # remoteに存在するブランチリストを取得する
@@ -22,4 +24,7 @@ for local_branch in ${local_branch_array[@]}; do
     git branch -D $local_branch
   fi
 done
+
+# masterを最新化
+git pull origin master
 
